@@ -33,7 +33,7 @@ while count < max_count:
             bp['extract_time'] = str(extract_time)
 
         # specify the file path to save json to local drive
-        filepath = 'data/' +  extract_time.strftime('%Y-%m-%dT%H-%M-%S') + '.json'
+        filepath = 'data/' +  extract_time.strftime('%Y-%m-%dT%H-%M') + '.json'
 
         # save to local drive
         with open(filepath, 'w') as file:
