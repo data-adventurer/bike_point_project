@@ -1,11 +1,11 @@
 name: Bike Point Injestion
 
-on:
+# on:
   # schedule:
   # every 5 minutes
   #  - cron: '*/5 * * * *'
   # allow workflow to run manually
-  workflow_dispatch: 
+  # workflow_dispatch: 
 
 jobs:
   build:
