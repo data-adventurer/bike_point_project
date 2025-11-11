@@ -1,0 +1,33 @@
+name: Bike Point Injestion
+
+on:
+  schedule:
+  # every 5 minutes
+    - cron: '*/5 * * * *'
+  # allow workflow to run manually
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: Bike Point Environment
+    steps:
+      - name: Checkout the repo
+      # take a copy of the repo to be isolated from changes coming in
+        uses: actions/checkout@v2
+        
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.1'
+  
+      - name: Install packages
+        run: pip install -r requirements.txt
+  
+      - name: Run the Python script
+        env:
+          aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
+          aws_secret_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          bucket: S{{secrets.AWS_BUCKET}}
+        run: python main.py
+  
