@@ -10,7 +10,8 @@ def load():
     aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
     bucket = os.getenv('AWS_BUCKET')
 
-    print(bucket)
+    print(aws_access_key)
+    print(aws_secret_key)
 
     s3_client = boto3.client(
         's3'
