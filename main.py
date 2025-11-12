@@ -13,6 +13,13 @@ from load import load
 # url for the Tfl Bike Point API
 url = 'https://api.tfl.gov.uk/BikePoint'
 
+print('running extract')
 extract(url)
+print('extract done')
 
+print('running load')
 load()
+print('load successful')
+
+
+
