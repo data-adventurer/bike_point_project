@@ -18,14 +18,14 @@ def load():
         ,aws_secret_access_key = aws_secret_key 
     )
 
-    dir = 'data'
-
     try:
-        try:
-            s3_client.list_objects_v2(Bucket=bucket)
-        except:
-            print('Access denied')
-            sys.exit(1)
+        dir = 'data'
+        
+        # try:
+        #     s3_client.list_objects_v2(Bucket=bucket)
+        # except:
+        #     print('Access denied')
+        #     sys.exit(1)
 
         file = [f for f in os.listdir(dir) if f.endswith('.json')]
 
