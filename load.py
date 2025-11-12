@@ -4,11 +4,11 @@ import os
 import sys
 
 def load():
-    load_dotenv()
+    load_dotenv(dotenv_path='docker\.env_encoded')
 
-    aws_access_key = os.getenv('aws_access_key')
-    aws_secret_key = os.getenv('aws_secret_access_key')
-    bucket = os.getenv('aws_bucket')
+    aws_access_key = os.getenv('AWS_ACCESS_KEY')
+    aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+    bucket = os.getenv('AWS_BUCKET')
 
     s3_client = boto3.client(
         's3'
