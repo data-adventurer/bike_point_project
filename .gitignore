@@ -1,6 +1,9 @@
 /data
 /.vscode
 *.env*
+/docker*
+
+/.github*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
