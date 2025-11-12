@@ -6,9 +6,9 @@ import sys
 def load():
     load_dotenv()
 
-    aws_access_key = os.getenv('SECRET_AWS_ACCESS_KEY')
-    aws_secret_key = os.getenv('SECRET_AWS_SECRET_ACCESS_KEY')
-    bucket = os.getenv('SECRET_AWS_BUCKET')
+    aws_access_key = os.getenv('AWS_ACCESS_KEY')
+    aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+    bucket = os.getenv('AWS_BUCKET')
 
     print(bucket)
 
