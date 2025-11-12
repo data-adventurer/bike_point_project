@@ -4,7 +4,7 @@ import os
 import sys
 
 def load():
-    load_dotenv(dotenv_path='docker\.env_encoded')
+    load_dotenv()
 
     aws_access_key = os.getenv('AWS_ACCESS_KEY')
     aws_secret_key = os.getenv('AWS_SECRET_ACCESS_KEY')
